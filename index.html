@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sosis collab</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+    }
+    header {
+      background: #e63946;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background: #f77f00;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px;
+      background: #ffba08;
+      color: #222;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+    }
+    .produk {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin: 10px 0;
+    }
+    .card button {
+      background: #e63946;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #a4161a;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #e63946;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>sosis collab</h1>
+    <p>Pedas 🔥 Gurih 😋 Mantap!</p>
+  </header>
+
+  <nav>
+    <a href="#produk">Produk</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Selamat Datang di jualan sosis collab</h1>
+    <p>Nikmati sosis collab dengan bumbu khas yang bikin nagih!</p>
+  </section>
+
+  <section id="produk" class="produk">
+    <div class="card">
+      <img src="miecollab.jpg" alt="Mie sosis gulung" width="300".jpg" alt="Mie Gulung Sosis" width="300"" alt="sosis collab">
+      <h3>sosis collab</h3>
+      <p>Rp 7.000</p>
+      
+
+    </div>"
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 sosis collab. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function pesan(namaProduk) {
+      alert("Anda memesan " + namaProduk + " ✅");
+    }
+  </script>
+</body>
+</html>
+<section id="kontak" style="text-align:center; padding:20px;">
+    <h2>Kontak Kami</h2>
+    <p>📍 Alamat: 11 TJKT 1 (Teori 32)</p>
+    <p>📞 WA: <a href="https://wa.me/6282172294221" target="_blank">+62821-7229-4221</a></p>
+    
+    <h3>Pesan Sekarang</h3>
+    <form id="orderForm" action="https://wa.me/6282172294221" method="get" target="_blank">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="orderDetails">Pesanan:</label><br>
+        <textarea id="orderDetails" name="orderDetails" required></textarea><br><br>
+
+        <label for="phone">Total pesanan:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <button type="submit">Kirim Pesanan</button>
+    </form>
+</section>
+
+<script>
+    document.getElementById("orderForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        
+        var name = document.getElementById("name").value;
+        var orderDetails = document.getElementById("orderDetails").value;
+        var phone = document.getElementById("phone").value;
+
+        var message = `Pesanan baru:\nNama: ${name}\nPesanan: ${orderDetails}\nNomor HP: ${phone}`;
+        
+        var waUrl = `https://wa.me/6282172294221?text=${encodeURIComponent(message)}`;
+        
+        window.open(waUrl, "_blank");
+    });
+</script>
+
+
